@@ -153,20 +153,23 @@ public class ventana2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//Regresa a la ventana principal
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
             new interfaz().setVisible(true);
             this.setVisible(false);
     }//GEN-LAST:event_CancelarActionPerformed
-
+// Verifica que los datos se hayan introducido y llama a los metodos de la clase archivo para crear la insancia y validar la salid
+    //ademas de mostrarla en una tabla
     private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
-       boolean decision = lista.get(0).getText().isEmpty();
+       //Validacion que los campos de los datos esten llenos 
+        boolean decision = lista.get(0).getText().isEmpty();
         for (int i = 1; i < lista.size(); i++) {
             decision = decision || lista.get(i).getText().isEmpty();
         }
         if (decision == true){
             JOptionPane.showMessageDialog(this, "Por Favor llene todos los espacios");
         } else{
+            //Creacion del archivo de la instancia que se quiiere ejecutar
             List<String> datos = new ArrayList<>();
             for (int i = 0; i < lista.size(); i++) {
                 datos.add(lista.get(i).getText());
@@ -180,7 +183,7 @@ public class ventana2 extends javax.swing.JFrame {
                     
                 }
               ProcessBuilder processBuilder = new ProcessBuilder();
-
+        //llamado de minizinc con el modelo y la instancia
         processBuilder.command("cmd.exe", "/c", "minizinc --solver Gecode C:\\Users\\Juancho270\\Documents\\NetBeansProjects\\Proyecto_Complejidad\\src\\archivos\\PeriodicoGenerico.mzn C:\\Users\\Juancho270\\Documents\\NetBeansProjects\\Proyecto_Complejidad\\src\\archivos\\instanciaPeriodico.dzn");
         processBuilder.directory(new File("D:\\MinizincIDE"));
 
@@ -188,7 +191,7 @@ public class ventana2 extends javax.swing.JFrame {
         // processBuilder.command("java", "Hello");
 
         try {
-
+               //Manipulacion de la salida para mostrar la tabla con la respuesta
             Process process = processBuilder.start();
 
             BufferedReader reader =

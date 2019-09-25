@@ -23,6 +23,7 @@ public class archivo {
         
     }
      
+    //Creacion de la instancia, se crea el archivo si no existe y si existe se sobre escribe
     public void escribir(int numero,int limite,List campos) throws IOException{
         File archivo = new File("src/archivos/instanciaPeriodico.dzn");
         BufferedWriter bw;
@@ -151,6 +152,8 @@ public class archivo {
         bw.close();
     }
     
+    
+    //Manipulacion de la salida de minizinc, se acomoda en una matriz la cual va a llenar la tabla con la informacion regresada
         Object[][] modelarTabla(BufferedReader reader) throws IOException {
         Object[][] datos = new Object[1000][4];
         String line;

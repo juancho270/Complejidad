@@ -45,7 +45,7 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Numero de topics: ");
+        jLabel1.setText("Numero de noticias: ");
 
         jLabel2.setText("Limite de pagínas:");
 
@@ -81,7 +81,7 @@ public class interfaz extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtextlimite, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                             .addComponent(jtextnumero))))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +103,8 @@ public class interfaz extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//Evento de boton abrir verifica que se ponga el numero de noticias y el limite de paginas y abre la nueva ventana
+    // para rellenar los datos 
     private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
         String numero = jtextnumero.getText();
         String limite = jtextlimite.getText();
