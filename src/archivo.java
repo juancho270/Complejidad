@@ -44,9 +44,9 @@ public class archivo {
         }
         if(archivo.exists()) {
             bw = new BufferedWriter(new FileWriter(archivo));
-            bw.write("n = " + numero + ";" + "\n");
-            bw.write("L = " + limite + ";" + "\n");
-            bw.write("LI = ");
+            bw.write("numero = " + numero + ";" + "\n");
+            bw.write("Limite = " + limite + ";" + "\n");
+            bw.write("LimInf = ");
             bw.write("[");
             for (int i = 0; i < minimos.size(); i++) {
                 if(i != minimos.size()-1){
@@ -57,7 +57,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("LS = ");
+            bw.write("LimSup = ");
             bw.write("[");
             for (int i = 0; i < maximos.size(); i++) {
                 if(i != maximos.size()-1){
@@ -68,7 +68,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("NT = ");
+            bw.write("NomTop = ");
             bw.write("[");
             for (int i = 0; i < topics.size(); i++) {
                 if(i != topics.size()-1){
@@ -83,7 +83,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("PL = ");
+            bw.write("PotLec = ");
             bw.write("[");
             for (int i = 0; i < lectores.size(); i++) {
                 if(i != lectores.size()-1){
@@ -96,9 +96,9 @@ public class archivo {
             bw.write("];" + "\n");
         } else {
             bw = new BufferedWriter(new FileWriter(archivo));
-            bw.write("n = " + numero + ";" + "\n");
-            bw.write("L = " + limite + ";" + "\n");
-            bw.write("LI = ");
+            bw.write("numero = " + numero + ";" + "\n");
+            bw.write("Limite = " + limite + ";" + "\n");
+            bw.write("LimInf = ");
             bw.write("[");
             for (int i = 0; i < minimos.size(); i++) {
                 if(i != minimos.size()-1){
@@ -109,7 +109,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("LS = ");
+            bw.write("LimSup = ");
             bw.write("[");
             for (int i = 0; i < maximos.size(); i++) {
                 if(i != maximos.size()-1){
@@ -120,7 +120,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("NT = ");
+            bw.write("NomTop = ");
             bw.write("[");
             for (int i = 0; i < topics.size(); i++) {
                 if(i != topics.size()-1){
@@ -135,7 +135,7 @@ public class archivo {
                 }
             }
             bw.write("];" + "\n");
-            bw.write("PL = ");
+            bw.write("PotLec = ");
             bw.write("[");
             for (int i = 0; i < lectores.size(); i++) {
                 if(i != lectores.size()-1){

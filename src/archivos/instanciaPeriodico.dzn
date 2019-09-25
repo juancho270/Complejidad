@@ -1,6 +1,6 @@
-n = 1;
-L = 50;
-LI = [1];
-LS = [50];
-NT = ["dsfa"];
-PL = [40];
+numero = 2;
+Limite = 1;
+LimInf = [1,1];
+LimSup = [2,2];
+NomTop = ["sdfg","sdfg"];
+PotLec = [10,20];

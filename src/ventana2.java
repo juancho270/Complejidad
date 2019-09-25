@@ -195,7 +195,7 @@ public class ventana2 extends javax.swing.JFrame {
                     new BufferedReader(new InputStreamReader(process.getInputStream()));
             /* archivo escribir = new archivo();*/
             Object[][] info = object.modelarTabla(reader);
-            String[] columnNames = {"Topic","Paginas","Lectores","Lectores totales",};
+            String[] columnNames = {"Topic","Paginas","Lectores por pagina","Lectores totales",};
             JTable tabla = new JTable(info, columnNames);
             JFrame ventana = new JFrame("Respuesta");
             ventana.add(new JScrollPane(tabla));
