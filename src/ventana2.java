@@ -1,5 +1,4 @@
 
-
 import java.awt.GridLayout;
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,16 +15,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Juancho270
- */
 public class ventana2 extends javax.swing.JFrame {
     int numero = 0;
     int limite = 0;
@@ -184,8 +173,9 @@ public class ventana2 extends javax.swing.JFrame {
                 }
               ProcessBuilder processBuilder = new ProcessBuilder();
         //llamado de minizinc con el modelo y la instancia
-        //Para ubuntu se ejecuta el comando desde consola 
-        processBuilder.command("minizinc --solver Gecode /src/archivo/PeriodicoGenerico.mzn /src/archivo/instanciaPeriodico.dzn);
+        //Para ubuntu se ejecuta el comando desde consola, MODIFICAR LA RUTA DEL DIRECTORIO 
+        processBuilder.command("bash","-c","minizinc --solver Gecode PeriodicoGenerico.mzn instanciaPeriodico.dzn");
+        processBuilder.directory(new File("/home/juancho270/eclipse-workspace/complejidad/src/archivos/"));
 
         // can also run the java file like this
         // processBuilder.command("java", "Hello");

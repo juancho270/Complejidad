@@ -1,6 +1,6 @@
-numero = 1;
-Limite = 1;
-LimInf = [1];
-LimSup = [2];
-NomTop = ["dfgh"];
-PotLec = [10];
+numero = 2;
+Limite = 5;
+LimInf = [1,2];
+LimSup = [5,4];
+NomTop = ["asdASD","AsdaS"];
+PotLec = [10,20];
