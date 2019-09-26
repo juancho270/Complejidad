@@ -184,8 +184,8 @@ public class ventana2 extends javax.swing.JFrame {
                 }
               ProcessBuilder processBuilder = new ProcessBuilder();
         //llamado de minizinc con el modelo y la instancia
-        processBuilder.command("cmd.exe", "/c", "minizinc --solver Gecode C:\\Users\\Juancho270\\Documents\\NetBeansProjects\\Proyecto_Complejidad\\src\\archivos\\PeriodicoGenerico.mzn C:\\Users\\Juancho270\\Documents\\NetBeansProjects\\Proyecto_Complejidad\\src\\archivos\\instanciaPeriodico.dzn");
-        processBuilder.directory(new File("D:\\MinizincIDE"));
+        //Para ubuntu se ejecuta el comando desde consola 
+        processBuilder.command("minizinc --solver Gecode /src/archivo/PeriodicoGenerico.mzn /src/archivo/instanciaPeriodico.dzn);
 
         // can also run the java file like this
         // processBuilder.command("java", "Hello");
